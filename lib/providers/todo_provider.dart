@@ -3,7 +3,7 @@ import 'package:riverpod_learning/model/todo.dart';
 
 List<Todo> todos = [
   Todo(datetime: DateTime.now().toString(), label: 'Watching Movie'),
-  Todo(datetime: DateTime.now().toString(), label: 'Watching Movie'),
+  Todo(datetime: DateTime.now().toString(), label: 'Playing game '),
   Todo(datetime: DateTime.now().toString(), label: 'Watching Movie'),
   Todo(datetime: DateTime.now().toString(), label: 'Watching Movie'),
 ];
