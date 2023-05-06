@@ -13,4 +13,8 @@ final todoProvider = StateNotifierProvider<TodoProvider, List<Todo>>(
 
 class TodoProvider extends StateNotifier<List<Todo>> {
   TodoProvider(super.state);
+
+  void addTodo(Todo todo) {
+    state = [...state, todo];
+  }
 }

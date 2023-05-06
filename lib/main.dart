@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
-import 'package:riverpod_learning/model/home_page.dart';
+import 'package:riverpod_learning/view/count_page.dart';
 
 void main() {
   runApp(
@@ -18,15 +18,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: HomePage(),
-      home: SimpleProvider(),
+      home: CountPage(),
+      // home: SimpleProvider(),
     );
   }
 }
 
-// learning Provider in riverpod
-
-// step one create provider if class is not to create first
+//! learning Provider in riverpod
+//! step one create provider if class is not to create first
 
 final nameProvider = Provider((ref) => 'Kshittiz');
 
@@ -35,7 +34,7 @@ class SimpleProvider extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // warch provider
+    // watch provider
 
     final name = ref.watch(nameProvider);
     return Scaffold(
