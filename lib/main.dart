@@ -5,7 +5,7 @@ import 'package:riverpod_learning/model/home_page.dart';
 
 void main() {
   runApp(
-    ProviderScope(
+    const ProviderScope(
       child: Home(),
     ),
   );
