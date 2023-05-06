@@ -18,7 +18,39 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      // home: HomePage(),
+      home: SimpleProvider(),
+    );
+  }
+}
+
+// learning Provider in riverpod
+
+// step one create provider if class is not to create first
+
+final nameProvider = Provider((ref) => 'Kshittiz');
+
+class SimpleProvider extends ConsumerWidget {
+  const SimpleProvider({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    // warch provider
+
+    final name = ref.watch(nameProvider);
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Example of Provider in riverpod'),
+      ),
+      body: SafeArea(
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Center(
+            child: Text('$name'),
+          ),
+        ),
+      ),
     );
   }
 }
